@@ -38,7 +38,7 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
     oi = new OI();
-    chooser.setDefaultOption("Default Auto", new DriveRobot());
+    //chooser.addDefault("Default Auto", new DriveAcrossLine());
   }
 
   /**
