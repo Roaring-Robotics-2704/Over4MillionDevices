@@ -32,7 +32,7 @@ public class DriveRobot extends Command {
     double joystickStrafeSpeed = Robot.oi.joystick.getY()*.5;
     double joystickTurnSpeed = Robot.oi.joystick.getZ()*.5;
     double deadzone = 0.2;
-    double turnDeadzone = 0.25;
+    double turnDeadzone = 0.30;
     if (Math.abs(Robot.oi.joystick.getX()) < deadzone) {
       joystickMovementSpeed = 0;
     }

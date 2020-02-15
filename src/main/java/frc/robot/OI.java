@@ -59,8 +59,6 @@ public class OI {
   
   public OI(){
     encoderTestButton.whenPressed(new DriveAcrossLine());
-
-    encoderTestButton.whenPressed(new DriveAcrossLine());
     brakeOnButton.whenPressed(new BrakeOn());
     brakeOffButton.whenPressed(new BrakeOff());
   }  
