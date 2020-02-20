@@ -27,6 +27,7 @@ public class Robot extends TimedRobot {
   public static Arm arm = new Arm();
   public static DriveAcrossLine driveAcrossLine = new DriveAcrossLine();
   public static OI oi;
+  public static Camera camera;
 
   Command autonomousCommand;
   SendableChooser<Command> chooser = new SendableChooser<>();
@@ -38,6 +39,7 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
     oi = new OI();
+    camera = new Camera();
     //chooser.addDefault("Default Auto", new DriveAcrossLine());
   }
 
