@@ -23,12 +23,11 @@ import frc.robot.commands.DriveRobot;
  * 
  * A basic mecanum drive subsytem.
  */
-
 public class DriveTrain extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
-  private static final Double wheelDiameter = 8.0/12.0;
+  private static final Double wheelDiameter = 6.0/12.0;
 
   //Create IMU object
   public ADIS16470_IMU imu = new ADIS16470_IMU();
@@ -60,14 +59,14 @@ public class DriveTrain extends Subsystem {
       //The left and right speed values may be incorrect
       case "forward":
         while (Math.abs(driveEncoder.getDistance()) < distance) {
-          moveMecanumDrive(-speed, 0, 0);
+          moveMecanumDrive(speed, 0, 0);
         }
         driveEncoder.reset();
         break;
 
       case "backward":
         while (Math.abs(driveEncoder.getDistance()) < distance) {
-          moveMecanumDrive(speed, 0, 0);
+          moveMecanumDrive(-speed, 0, 0);
         }
         driveEncoder.reset();
         break;
